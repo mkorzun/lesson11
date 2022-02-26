@@ -9,5 +9,5 @@ RUN set -x \
   && wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.75/bin/apache-tomcat-8.5.75.tar.gz \
   && tar xvzf apache-tomcat-8.5.75.tar.gz  --strip-components 1 --directory /opt/tomcat \
   && rm -rf apache-tomcat-8.5.75.tar.gz
-ADD boxfuse-sample-java-war-hello-war-hello/target/hello-*.war /opt/tomcat/webapps/
+ADD hello-*.war /opt/tomcat/webapps/
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
